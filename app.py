@@ -18,9 +18,26 @@ from prophet import Prophet
 from sklearn.metrics import mean_absolute_percentage_error
 import yfinance as yf
 from statsmodels.tsa.holtwinters import SimpleExpSmoothing
-
+rom fastapi.responses import HTMLResponse
 
 app = FastAPI()
+
+
+@app.get("/", response_class=HTMLResponse)
+async def main_page():
+    content = """
+    <html>
+    <head>
+        <title>Привет! Это главная страница приложения</title>
+    </head>
+    <body>
+        <h1>Привет! Это главная страница приложения</h1>
+        <p>Для доступа к API используйте <a href="/docs">документацию</a>.</p>
+    </body>
+    </html>
+    """
+    return content
+
 
 class DataRequest(BaseModel):
     ticker: str
