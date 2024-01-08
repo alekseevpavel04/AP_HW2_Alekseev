@@ -13,7 +13,7 @@ from aiogram.types import CallbackQuery
 import json
 
 TELEGRAM_TOKEN = "6328278069:AAGMTGtt3FcRIdhrj0o8d1LxHgzjNFSTUHg"
-FASTAPI_URL  = 'http://3.75.158.163/predict'
+FASTAPI_URL  = 'http://3.75.158.163:8000/predict'
 bot = Bot(token=TELEGRAM_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
