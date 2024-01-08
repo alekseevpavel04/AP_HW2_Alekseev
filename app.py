@@ -18,7 +18,7 @@ from prophet import Prophet
 from sklearn.metrics import mean_absolute_percentage_error
 import yfinance as yf
 from statsmodels.tsa.holtwinters import SimpleExpSmoothing
-rom fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
